@@ -1,3 +1,46 @@
+#**DAY4-NOTE**
+
+##==**try-expect异常捕获机制**==
+
+```python
+举例：
+try:
+    # 尝试执行的代码（危险区域）
+    file = open("data.txt", "r")
+    content = file.read()
+    number = int(content)
+    
+except FileNotFoundError:
+    # 处理文件不存在的异常
+    print("文件不存在！")
+    
+except ValueError:
+    # 处理值转换错误
+    print("文件内容不是有效数字！")
+    
+except Exception as e:
+    # 捕获所有其他异常（兜底）
+    print(f"发生未知错误：{e}")
+    
+else:
+    # 只有当try块没有异常时才执行
+    print("文件读取成功！")
+    
+finally:
+    # 无论是否发生异常，都会执行（清理工作）
+    print("程序执行结束")
+    # 通常用于关闭文件、释放资源等
+```
+###**常见异常类型**
+ZeroDivisionError  ValueError  TypeError  IndexError  KeyError  FileNoteFoundError
+
+##**for循环**
+##**while循环**
+##**if-elif-else**
+
+
+
+
 #**DAY3-NOTE**
 
 ##==**数据类型**==
@@ -80,6 +123,7 @@ replace(被替换的,替换的)
 startswith(检查对象,start,end): 检查是否为指定开头，可同时检查多个可能的开头
 
 endswith(检查对象,start,end): 检查是否为指定结尾
+strip（）：去除字符串首尾空白
 
 
 
@@ -387,6 +431,7 @@ print("update() 多参数后:", set1)  # {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 -=或difference_update()
 ^=或symmetric_difference_update()
 ```
+
 
 
 
