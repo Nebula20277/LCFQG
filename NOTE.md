@@ -1,7 +1,7 @@
 #**DAY4-NOTE**
 
 ##==**try-expect异常捕获机制**==
-
+直接用代码例子更清晰吧：
 ```python
 举例：
 try:
@@ -32,10 +32,12 @@ finally:
     # 通常用于关闭文件、释放资源等
 ```
 ###**常见异常类型**
-ZeroDivisionError  ValueError  TypeError  IndexError  KeyError  FileNoteFoundError
+ZeroDivisionError    ValueError    TypeError    IndexError    KeyError    FileNoteFoundError
 
 ##**for循环**
+
 ##**while循环**
+
 ##**if-elif-else**
 
 
@@ -98,6 +100,62 @@ greater_than_5 = filter(lambda x: x > 5, numbers)
 print("大于5的数:", list(greater_than_5))  # [6, 7, 8, 9, 10]
 #和map（）一样具有惰性求值的特性，且只能遍历一次
 ```
+
+##**数据清洗核心技能re（regular expression）**
+###**WHAT & HOW**
+在python无需额外pip，只需：
+```python
+import re
+```
+re,中文叫“正则表达式”，即**正则表达式是一组由字母和符号组成的特殊文本，它可以用来从文本中找出满足你想要的格式的句子**，其主要有四个函数：
+1. re.findall()  找出所有匹配内容
+
+2. re.sub()  替换/清洗脏字符
+
+3. re.match()  从头匹配
+
+4. re.search()  找任意位置的第一个匹配
+
+re模块常用函数返回值为list[]，找不到则返回空列表[]
+**须记住：**
+-  \d  ： 单个半角数字（0-9），比如匹配  5 ，不匹配  a  或  你 
+
+-  \d+  ： 一串连续的半角数字，比如匹配  199 、 888 
+
+-  \w  ： 单个字母/数字/下划线，比如匹配  a 、 5 、 _ 
+
+-  \w+  ： 一串连续的字母/数字/下划线，比如匹配  user123 、 name_1 
+
+-  \s  ： 单个空白（空格、换行、Tab），比如匹配普通空格、换行符
+
+-  \s+  ： 一串连续的空白，比如匹配多个连续空格
+
+-  .  ： 任意单个字符（除换行），比如匹配  a 、 ! 、 你 
+
+-  []  ： 匹配括号内任意一个字符，比如  [a-zA-Z]  匹配单个英文字母
+
+-  [^...]  ： 匹配「不在括号内」的任意字符，比如  [^a-zA-Z0-9\u4e00-\u9fa5]  匹配所有非中英数字的字符
+
+-  +  ：前面的字符连续出现 ≥1 次，比如  \d+  表示连续多个数字
+
+- \u4e00-\u9fa5  ：所有汉字
+
+- \uff01-\uff5e  ：全角数字，字母，大部分常用符号
+
+控制符等：
+-  \n   换行
+
+-  \r   回车
+
+-  \t   制表符（Tab）
+
+-  \b   退格
+
+-  \0   空字符
+
+-  \x00-\x1f  各种底层控制字符
+
+- 全角空格  \u3000
 
 
 
@@ -491,6 +549,7 @@ print("update() 多参数后:", set1)  # {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 -=或difference_update()
 ^=或symmetric_difference_update()
 ```
+
 
 
 
