@@ -1,5 +1,7 @@
 #***PERSONAL  PROFILE***
 
+---
+
 ##**About Me**  
 
 |  **项目**  | **内容**                                       |
@@ -10,6 +12,8 @@
 |  **专业**  | 数据科学与大数据技术 |
 |  **兴趣**  | 世界一级方程式赛车                             |
 | **座右铭** | >THIS IS WHY WE COME RACING                    |
+
+---
 
 ##**Reasons For Joining QG-AI**
 
