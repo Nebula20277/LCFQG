@@ -1,7 +1,9 @@
 #**DAY4-NOTE**
 
 ##==**try-expect异常捕获机制**==
+
 直接用代码例子更清晰吧：
+
 ```python
 举例：
 try:
@@ -32,6 +34,7 @@ finally:
     # 通常用于关闭文件、释放资源等
 ```
 ###**常见异常类型**
+
 ZeroDivisionError    ValueError    TypeError    IndexError    KeyError    FileNoteFoundError
 
 ##**for循环**
@@ -42,11 +45,13 @@ ZeroDivisionError    ValueError    TypeError    IndexError    KeyError    FileNo
 
 
 ##**列表推导式**
+
 ```python
 [表达式 for 变量 in 可迭代对象 if 条件]
 ```
 
 ##**匿名函数 lambda**
+
 ```python
 lambda 参数1, 参数2, ...: 表达式
 # ↑ 没有函数名    ↑ 自动返回表达式结果
@@ -58,6 +63,7 @@ words.sort(key=lambda word: len(word))
 # ['kiwi', 'pear', 'apple', 'banana']
 ```
 ##**高阶函数 map filter**
+
 *高阶函数：接受函数作为参数，==或==返回函数的函数*
 
 ###**map()函数**
@@ -83,6 +89,7 @@ print("再次遍历:", list(squared))  # [] ← 空了！
 ```
 
 ###**filter()函数**
+
 ```python
 filter(函数, 可迭代对象)  # 返回filter对象
 #作用：筛选出满足条件的元素
@@ -102,12 +109,16 @@ print("大于5的数:", list(greater_than_5))  # [6, 7, 8, 9, 10]
 ```
 
 ##**数据清洗核心技能re（regular expression）**
+
 ###**WHAT & HOW**
+
 在python无需额外pip，只需：
+
 ```python
 import re
 ```
 re,中文叫“正则表达式”，即**正则表达式是一组由字母和符号组成的特殊文本，它可以用来从文本中找出满足你想要的格式的句子**，其主要有四个函数：
+
 1. re.findall()  找出所有匹配内容
 
 2. re.sub()  替换/清洗脏字符
@@ -117,7 +128,9 @@ re,中文叫“正则表达式”，即**正则表达式是一组由字母和符
 4. re.search()  找任意位置的第一个匹配
 
 re模块常用函数返回值为list[]，找不到则返回空列表[]
+
 **须记住：**
+
 -  \d  ： 单个半角数字（0-9），比如匹配  5 ，不匹配  a  或  你 
 
 -  \d+  ： 一串连续的半角数字，比如匹配  199 、 888 
@@ -143,6 +156,7 @@ re模块常用函数返回值为list[]，找不到则返回空列表[]
 - \uff01-\uff5e  ：全角数字，字母，大部分常用符号
 
 控制符等：
+
 -  \n   换行
 
 -  \r   回车
@@ -549,6 +563,7 @@ print("update() 多参数后:", set1)  # {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 -=或difference_update()
 ^=或symmetric_difference_update()
 ```
+
 
 
 
