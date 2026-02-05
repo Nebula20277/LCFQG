@@ -39,6 +39,66 @@ ZeroDivisionError  ValueError  TypeError  IndexError  KeyError  FileNoteFoundErr
 ##**if-elif-else**
 
 
+##**列表推导式**
+```python
+[表达式 for 变量 in 可迭代对象 if 条件]
+```
+
+##**匿名函数 lambda**
+```python
+lambda 参数1, 参数2, ...: 表达式
+# ↑ 没有函数名    ↑ 自动返回表达式结果
+
+举例1：
+# 对列表按字符串长度排序
+words = ["apple", "kiwi", "banana", "pear"]
+words.sort(key=lambda word: len(word))
+# ['kiwi', 'pear', 'apple', 'banana']
+```
+##**高阶函数 map filter**
+*高阶函数：接受函数作为参数，==或==返回函数的函数*
+
+###**map()函数**
+```python
+map(函数, 可迭代对象)  # 返回map对象（可转换为列表）
+#作用：将函数应用到序列的每个元素
+
+举例1：
+# 创建一个列表
+numbers = [1, 2, 3, 4, 5]
+
+# 使用map将每个数字平方
+squared = map(lambda x: x**2, numbers)
+
+print("map对象:", squared)         # <map object at 0x...>输出map的内存地址，但每次运行结果都不一样
+print("类型:", type(squared))      # <class 'map'>
+
+# map对象是迭代器，需要转换为列表查看（惰性求值的特性）
+print("平方结果:", list(squared))  # [1, 4, 9, 16, 25]
+
+# 注意：map对象只能遍历一次！
+print("再次遍历:", list(squared))  # [] ← 空了！
+```
+
+###**filter()函数**
+```python
+filter(函数, 可迭代对象)  # 返回filter对象
+#作用：筛选出满足条件的元素
+
+举例1：
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# 过滤偶数
+even_numbers = filter(lambda x: x % 2 == 0, numbers)
+print("filter对象:", even_numbers)  # <filter object at 0x...>
+print("偶数:", list(even_numbers))   # [2, 4, 6, 8, 10]
+
+# 过滤大于5的数
+greater_than_5 = filter(lambda x: x > 5, numbers)
+print("大于5的数:", list(greater_than_5))  # [6, 7, 8, 9, 10]
+#和map（）一样具有惰性求值的特性，且只能遍历一次
+```
+
 
 
 #**DAY3-NOTE**
@@ -431,6 +491,7 @@ print("update() 多参数后:", set1)  # {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 -=或difference_update()
 ^=或symmetric_difference_update()
 ```
+
 
 
 
