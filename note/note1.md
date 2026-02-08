@@ -212,6 +212,8 @@ print(flexible_dict)
 
 获取：keys()  values()  items()
 
+user_id in self.__users 等价于 user_id in self.__users.keys()  也就是说，当你想判断字典的key时可以直接用in dict来判断，但value则不行
+
 
 
 ## **元组**
