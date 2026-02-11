@@ -60,4 +60,5 @@ plt.tight_layout()
 plt.savefig('titanic_chart.png')
 plt.show()
 
+
 print('Running completed! Generated chart file: titanic_chart.pngs')
