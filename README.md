@@ -1,8 +1,8 @@
-#***PERSONAL  PROFILE***
+# ***PERSONAL  PROFILE***
 
 ---
 
-##**About Me**  
+## **About Me**  
 
 |  **项目**  | **内容**                                       |
 | :--------: | ---------------------------------------------- |
@@ -15,7 +15,7 @@
 
 ---
 
-##**Reasons For Joining QG-AI**
+## **Reasons For Joining QG-AI**
 
 *我想我在决定参加寒假训练营之前确实think了很多了，现在正是do的时候了。*:boxing_glove:
 
