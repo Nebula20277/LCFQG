@@ -162,7 +162,7 @@ diag_matrix = np.diag(diag_vals)
   [0, 0, 0, 4]]
 
 从矩阵提取对角线
-
+```python
 matrix = np.array([[1, 2, 3],
   
                    [4, 5, 6],
