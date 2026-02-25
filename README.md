@@ -11,7 +11,7 @@
 |  **学院**  | 自动化学院                                     |
 |  **专业**  | 数据科学与大数据技术 |
 |  **兴趣**  | 世界一级方程式赛车                             |
-| **座右铭** | > THIS IS WHY WE COME RACING                    |
+| **座右铭** | THIS IS WHY WE COME RACING                    |
 
 ---
 
