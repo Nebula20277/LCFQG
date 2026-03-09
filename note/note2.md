@@ -80,7 +80,7 @@ words.sort(key=lambda word: len(word))
  
 ## 高阶函数 map filter
 
-高阶函数：接受函数作为参数，==或==返回函数的函数
+高阶函数：接受函数作为参数，或返回函数的函数
 
 ### map()函数
 
