@@ -27,7 +27,7 @@
 
 
 
-##import math（cmath：复数）
+import math（cmath：复数）
 
 abs(): 绝对值；pow(x, y): x 的 y 次幂；round(): 四舍五入
 
