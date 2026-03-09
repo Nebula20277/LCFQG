@@ -62,7 +62,7 @@ ZeroDivisionError  ValueError  TypeError  IndexError  KeyError  FileNoteFoundErr
 
 [表达式 for 变量 in 可迭代对象 if 条件]
 
-##匿名函数 lambda
+## 匿名函数 lambda
 
 lambda 参数1, 参数2, ...: 表达式
 
